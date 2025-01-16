@@ -164,3 +164,4 @@ C:\Users\ASUS\Documents\Project\Phoenix\obj\Debug\net8.0\Phoenix.csproj.Assembly
 C:\Users\ASUS\Documents\Project\Phoenix\obj\Debug\net8.0\Phoenix.csproj.Up2Date
 C:\Users\ASUS\Documents\Project\Phoenix\obj\Debug\net8.0\Phoenix.RazorAssemblyInfo.cache
 C:\Users\ASUS\Documents\Project\Phoenix\obj\Debug\net8.0\Phoenix.RazorAssemblyInfo.cs
+C:\Users\ASUS\Documents\Project\Phoenix\bin\Debug\net8.0\Phoenix.staticwebassets.runtime.json

@@ -1,14 +1,20 @@
 @model RoomTypeViewModel
 
-@using(Html.BeginForm("saveRoomType", "room", FormMethod.Post)) {
-    @Html.HiddenFor(e => e.RoomTypeId);
-    @Html.LabelFor(e => e.Code);
-    @Html.TextBoxFor(e => e.Code);
-    @Html.LabelFor(e => e.Description);
-    @Html.TextBoxFor(e => e.Description);
-    @Html.LabelFor(e => e.GuestLimit);
-    @Html.TextBoxFor(e => e.GuestLimit);
-    @Html.LabelFor(e => e.Cost);
-    @Html.TextBoxFor(e => e.Cost);
-    <button type="submit">Submit</button>
-}
+<div class="row">
+    <h1>Add New Room Type</h1>
+</div>
+
+<div class="row">
+    @using(Html.BeginForm("saveRoomType", "room", FormMethod.Post)) {
+        @foreach (var property in Model.GetType().GetProperties()) {
+            if (property.Name == "RoomTypeId") @Html.Hidden(property.Name)
+            else {
+                <div class="mb-3">
+                    @Html.Label(property.Name)
+                    @Html.Editor(property.Name, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            }
+        }
+        <button type="submit" class="btn btn-primary">Submit</button>
+    }
+</div>
