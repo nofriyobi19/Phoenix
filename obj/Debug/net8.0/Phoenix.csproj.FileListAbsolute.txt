@@ -162,3 +162,5 @@ C:\Users\ASUS\Documents\Project\Phoenix\bin\Debug\net8.0\runtimes\browser\lib\ne
 C:\Users\ASUS\Documents\Project\Phoenix\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\ASUS\Documents\Project\Phoenix\obj\Debug\net8.0\Phoenix.csproj.AssemblyReference.cache
 C:\Users\ASUS\Documents\Project\Phoenix\obj\Debug\net8.0\Phoenix.csproj.Up2Date
+C:\Users\ASUS\Documents\Project\Phoenix\obj\Debug\net8.0\Phoenix.RazorAssemblyInfo.cache
+C:\Users\ASUS\Documents\Project\Phoenix\obj\Debug\net8.0\Phoenix.RazorAssemblyInfo.cs

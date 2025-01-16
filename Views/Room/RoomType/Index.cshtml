@@ -1,0 +1,29 @@
+@model List<RoomTypeViewModel>
+
+<div>
+   <a asp-route="insertRoomType">Add New Room Type</a>
+</div>
+<div>
+    <table>
+    <thead>
+        <tr>
+            <th>Action</th>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Guest Limit</th>
+            <th>Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var roomType in @Model) {
+            <tr>
+                <td>@roomType.RoomTypeId</td>
+                <td>@roomType.Code</td>
+                <td>@roomType.Description</td>
+                <td>@roomType.GuestLimit</td>
+                <td>@roomType.Cost</td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,14 @@
+@model RoomTypeViewModel
+
+@using(Html.BeginForm("saveRoomType", "room", FormMethod.Post)) {
+    @Html.HiddenFor(e => e.RoomTypeId);
+    @Html.LabelFor(e => e.Code);
+    @Html.TextBoxFor(e => e.Code);
+    @Html.LabelFor(e => e.Description);
+    @Html.TextBoxFor(e => e.Description);
+    @Html.LabelFor(e => e.GuestLimit);
+    @Html.TextBoxFor(e => e.GuestLimit);
+    @Html.LabelFor(e => e.Cost);
+    @Html.TextBoxFor(e => e.Cost);
+    <button type="submit">Submit</button>
+}
