@@ -34,8 +34,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxSb29tVHlwZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/Documents/Project/Phoenix/Views/Room/RoomType/Insert.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxSb29tVHlwZVxJbnNlcnQuY3NodG1s
+[C:/Users/ASUS/Documents/Project/Phoenix/Views/Room/RoomType/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxSb29tVHlwZVxVcHNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ASUS/Documents/Project/Phoenix/Views/Shared/_Layout.cshtml]

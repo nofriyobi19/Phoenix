@@ -12,8 +12,13 @@ public class RoomService(IRoomTypeRepository roomTypeRepository) {
         return [.. roomTypes.Select(e => e.ToRoomTypeViewModel())];
     }
 
-    public async Task<RoomTypeViewModel> InsertRoomTypeAsync(RoomTypeViewModel roomTypeViewModel) {
+    public async Task<RoomTypeViewModel> SaveAsync(RoomTypeViewModel roomTypeViewModel) {
         var roomType = await _roomTypeRepository.SaveAsync(roomTypeViewModel.ToRoomType());
+        return roomType.ToRoomTypeViewModel();
+    }
+
+    public async Task<RoomTypeViewModel> GetRoomTypeByIdAsync(long roomTypeId) {
+        var roomType = await _roomTypeRepository.GetByIdAsync(roomTypeId);
         return roomType.ToRoomTypeViewModel();
     }
 }

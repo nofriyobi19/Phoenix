@@ -5,7 +5,7 @@
 </div>
 
 <div class="row">
-   <a asp-route="insertRoomType">Add New Room Type</a>
+   <a asp-route="upsertRoomType">Add New Room Type</a>
 </div>
 
 <div class="row">
@@ -22,7 +22,9 @@
     <tbody>
         @foreach (var roomType in @Model) {
             <tr>
-                <td>@roomType.RoomTypeId</td>
+                <td>
+                    <a asp-route="upsertRoomType" asp-route-id="@roomType.RoomTypeId" class="btn btn-primary">Edit</a>
+                </td>
                 <td>@roomType.Code</td>
                 <td>@roomType.Description</td>
                 <td>@roomType.GuestLimit</td>

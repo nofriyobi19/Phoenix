@@ -18,14 +18,15 @@ public class RoomController(RoomService roomService) : Controller {
         return View("./RoomType/Index", roomTypes);
     }
 
-    [Route("room/type/insert", Name = "insertRoomType")]
-    public IActionResult InsertRoomType() {
-        return View("./RoomType/Insert", new RoomTypeViewModel());
+    [Route("room/type/upsert/{id?}", Name = "upsertRoomType")]
+    public async Task<IActionResult> UpsertRoomType(long? id) {
+        RoomTypeViewModel model = id is null ? new() : await service.GetRoomTypeByIdAsync(id.Value);
+        return View("./RoomType/Upsert", model);
     }
 
     [Route("room/type/save", Name = "saveRoomType")]
     public async Task<IActionResult> SaveRoomType(RoomTypeViewModel roomTypeViewModel) {
-        var roomType = await service.InsertRoomTypeAsync(roomTypeViewModel);
+        var roomType = await service.SaveAsync(roomTypeViewModel);
         return RedirectToAction("GetAllRoomType");
     }
 }
